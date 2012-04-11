@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>This is about.html</title>
+</head>
+<body>
+<div>
+	<div><a href="/index.html">/index.html</a></div>
+{% for environ in environs %}
+	{% if environ.key %}
+	<div>os.environ['{{ environ.key }}'] = {{ environ.value }}</div>
+	{% endif %}
+	<div>end for</div>
+{% endfor %}
+</div>
+</body>
+</html>
